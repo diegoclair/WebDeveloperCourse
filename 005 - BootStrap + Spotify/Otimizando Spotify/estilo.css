@@ -1,0 +1,63 @@
+@media screen and (max-width: 767px){
+    body {
+        background: red;
+    }
+    h1{
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    body {
+        background: blue;
+    }
+
+    h1{
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    body {
+        background: orange;
+    }
+    h1{
+        font-size: 90px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    body {
+        background: black;
+        color: white;
+    }
+    h1{
+        font-size: 110px;
+        color: white;
+    }
+}
+
+@media print {
+    h1{
+        color: yellow;
+        font-size: 400px;
+    }
+    
+}
+
+.item{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    
+    /*Overflow, podemos usar as seguintes opções:
+    
+    visible: Ele irá exibir todo o conteúdo, mesmo se não couber no tamanho definido, neste caso 200 por 200
+    
+    hidden: Ele irá esconder todo o conteúdo que passar do tamanho definido
+    
+    scroll: Ele irá criar umas barras na vertical e horizontal independe se for ou não necessário
+    
+    auto: Ele irá colocar as barras de acordo com a necessidade*/
+    overflow: auto ;
+}

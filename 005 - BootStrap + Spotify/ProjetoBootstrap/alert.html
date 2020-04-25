@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alert</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <a class="btn btn-primary" href="home.html" role="button" style="margin: 10px;">Home</a>
+
+    <div class="container">
+        
+        <div class="page-header">
+            <h1>BootStrap Alert</h1>
+        </div>
+
+        <!-- Ao escrever bs3 alert, ele preenche já toda estrutura abaixo, bastou apenas eu colocar a cor do alerta com alert-sucess por exemplo -->
+        <div class="alert alert-success" role="alert">
+            <!-- Role serve para dizer a função ou papel da div, pois pessoas deficientes podem acessar utilizando um programa de leitura de tela -->
+            <!-- Accessible Rich Internet Applications (ARIA) 
+            No programa de def visual, ele irá dizer o label (fechar) e não irá dizer o &times, pois utilizados o atributo aria hidden = true-->
+            <button type="button" class="close" data-dismiss="alert" aria-label="Fechar" aria-hidden="true">&times;</button>
+            <strong>Sucess</strong> teste!!
+        </div>
+
+        <div class="alert alert-info" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Fechar" aria-hidden="true">&times;</button>
+            <strong>Info</strong> teste!! 
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Fechar" aria-hidden="true">&times;</button>
+            <strong>Danger</strong> teste!!
+        </div>
+
+        <div class="alert alert-warning" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Fechar" aria-hidden="true">&times;</button>
+            <strong>Warning</strong> teste!! 
+        </div>
+
+        <br><br>
+        <div>
+            <h4>Podemos colocar as cores e todos os itens que são de alerta, conseguimos colocar o "x" para que a pessoa possa eliminar esse alerta.</h4>
+            <h4>Para saber mais acesse <a href="https://getbootstrap.com/docs/3.3/javascript/#alerts">aqui</a>.</h4>
+        </div>        
+
+    </div> <!-- container -->
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

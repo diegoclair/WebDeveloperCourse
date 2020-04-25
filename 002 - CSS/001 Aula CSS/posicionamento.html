@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Posicionamento</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+			
+			body{
+				background-color:  #61bd8c;
+			}
+
+			#conteudo-principal{
+
+				background-color: #FFFFFF;
+				padding: 10px;
+				width: 600px; 
+				height: 2500px;
+				/*no width podemos usar uma porcentagem para manter uma proporção do site*/
+				margin: 30px auto;
+				/*no margin podemos usar o auto no segundo parametro e ele sempre será ficará centralizado, respeitando a larguda definida no width */
+				margin-top: 100px;
+				/*position: relative;*/
+			}
+
+			.caixa{
+				background-color: #1e6f44;
+				width: 100px;
+				height: 80px;
+				color: white;
+			}
+
+			#relative{
+				position: relative;
+				/*Quando usamos o relative, conseguimos posicionar o elemento com base na sua posição incial*/
+				top: 15px;
+				/*Movimentamos a div 15 pixel de cima para baixo
+				Não podemos confundir com a margem, aqui ´´os estamos movimentando*/
+				left: -30px;
+				width: 660px;
+				/*Podemos usar valores NEGATIVOS e podemos ter um efeito legal*/
+			}
+
+			#absolute{
+				position: absolute;
+				/*absolute ele deixa a posição absoluta do item, isso quer dizer: A div sempre se autopreenche de acordo com o conteúdo, e usando o absolute, ele não se autopreeche, é como se a div do absolute não estive mais dentro da div principal
+				Ele sempre vai se basear no mais próximo que tenha uma posição
+				Se colocarmos uma posição no div de fora, ele se baseará nele e se tivermos uma position apenas no body, ele se baseará no body (corpo que aparece atualmente no navegador, exatamente no final visivel do navegador)*/
+				bottom: 0px;
+				right: 30px;
+			}
+			#fixed{
+				position: fixed;
+				/*Ele fica fixo independente se você sobe ou desce a página, serve geralmente para usar como um menu fixo no top do site*/
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				margin: 5px;
+				background-color: #000;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="conteudo-principal">
+
+			<h1>Posicionamento</h1>
+
+			<h4>Relative</h4>
+			<div id="relative" class="caixa">Relative</div>
+
+			<h4>Absolute</h4>
+			<div id="absolute" class="caixa">Absolute</div>	
+
+			<h4>Fixed</h4>
+			<div id="fixed" class="caixa">Fixed</div>		
+
+		</div>
+
+	</body>
+</html>

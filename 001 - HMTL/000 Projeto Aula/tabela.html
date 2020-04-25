@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabelas</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<h1>Tabelas</h1>
+
+		<a href="index.html">
+				Home
+		</a> <br>
+
+		<a href="Contato.html">
+			Contato
+		</a> <br>
+
+		Tabela de Produtos<br>
+
+		<a href="formularios.html">
+			Formulários
+		</a> <br>
+	
+		<a href="caracteres_especiais.html">
+			Caracteres especiais
+		</a> <br><br><br>
+
+		Tabela de Produtos
+
+	<table border="1" width="100%"> <!--estamos criando para a tabela, uma borda de 1 pixel e definimos a porcentagem da tabela, 100 ocupa todo o espaço de acordo com o tamanho do browze-->
+
+		<tr>  <!--table row, aqui criamos uma linha na tabela-->
+			
+			<!--table head (th) serve pra dizer que é o cabeçalho da tabela e então ele escreve de forma diferente-->
+
+			<th>Código</th>
+			<th>Produto</th>
+			<th>Foto Produto</th>
+			<th>Preço</th>
+		</tr> 
+		<tr>
+				<!--table data (td), aqui é onde colocamos os dados dentro da tabela, pode ser considera a célula de uma tabela-->
+
+
+			<td>00000123</td>
+			<td>Ford Mustang</td>
+			<td><img src="imagens/mustang.png" width="100" height="35"></td>
+			<td>R$ 259.000,00</td>
+		</tr>
+		<tr>
+			<td>00000124</td>
+			<td>Chevrolet Camaro</td>
+			<td> <img src="http://autos.culturamix.com/blog/wp-content/gallery/camaro-amarelo-historia-informacoes-e-qualidade-2/Camaro-Amarelo-5.jpg" width="80" height="35"></td>
+			<td>R$ 239.000,00</td>
+		</tr>
+		<tr>
+			<th colspan="3">Total</th>  <!--colspan serve para ocupar um determminado número de colunas-->
+			<td>R$ 498.000,00</td>
+		</tr>
+		<tr>
+			<!--Rowspan serve para ocupar um determminado número de linhas-->
+			<td rowspan="2" colspan="2">Desconto</td>
+			<td colspan="2">Cupom "X": -R$ 5.000,00</td>
+		</tr>
+		<tr>
+			<td colspan="2">Cupom "Y": -R$ 9.000,00</td>
+		</tr>
+		
+		
+
+	</table>
+
+</body>
+</html>

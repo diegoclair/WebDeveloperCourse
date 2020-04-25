@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Páginas de Forms</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<h1>Fomrulários</h1>
+
+		<a href="index.html">
+				Home
+		</a> <br>
+
+		<a href="Contato.html">
+			Contato
+		</a> <br>
+		
+		<a href="tabela.html">
+			Tabela de Produtos
+		</a><br>
+
+		Formulários<br>
+	
+		<a href="caracteres_especiais.html">
+			Caracteres especiais
+		</a> <br><br><br>
+
+		<form>
+			Login: <br>
+			<!--Tag input é para entrada de dados, Definimos o tipo-->
+			<input type="text" name="login"><br>
+			Senha: <br>
+			<!--o tipo password esconde os caracteres-->
+			<input type="password" name="senha"><br><br>
+
+<!--type button para criar um botão na tela e colocar o nome dele no value-->
+			<input type="submit" value="ENTRAR">
+<!--Submit é a mesma coisa que botão, porém quando clica no botão, ele já recupera e envia os dados 
+	(Podemos perceber que o link da página muda quando clicamos no botão acrescentando os dados que estavam nos campos de login e senha)-->
+
+		</form>
+
+		<hr>
+		<h1>Cadastre-se</h1>
+		Login: <br>
+		<input type="text"><br><br>
+		<h3>Sexo:</h3>
+<!--Quando colocamos o nome, significa que os dois são "o mesmo", e portanto você só pode selecionar um deles-->
+		<input type="radio" name="sexo">Masculino<br>
+		<input type="radio" name="sexo">Feminino<br><br>
+<!--Checkbox é para slecionar um ou vários itens-->
+		<h3>Interesses:</h3>
+		<input type="checkbox"> Futebol <br>
+		<input type="checkbox"> Cursos <br>
+		<input type="checkbox"> Cinema <br>
+		<input type="checkbox"> praia <br><br>
+
+		<h3>Estado:</h3>
+<!--O componente Select é um combobox, onde você pode escolher várias opções-->
+		<select>
+			<option>SP</option>
+			<option>MG</option>
+			<option>RJ</option>
+			<option>RS</option>
+		</select><br><br>
+
+		<h3>Observações:</h3>
+<!--O textarea é uma caixa de texto um pouco maior e que permite que você aumente o tamanho dela-->
+		<textarea></textarea><br>
+
+		<input type="submit" value="CADASTRAR">
+
+	</body>
+
+</html>

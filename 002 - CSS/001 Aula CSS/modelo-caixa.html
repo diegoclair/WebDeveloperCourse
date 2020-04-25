@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Modelos de Caixa</title>
+		<meta charset="utf-8">
+
+		<style>
+		/*Método para importar uma fonte, peguei no site do google*/
+		@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+		</style>
+
+
+		<style type="text/css">
+		/*Podemos aplicar a borda e outras formatações em todas as tags <>
+		body p div .. etc*/
+
+			#cabecalhoexemplo{
+				border: 1px solid red;
+				margin: 30px 20px 10px 5px;
+				padding-top: 10px; 
+
+				/*Margin é espaçamento externo e padding é o espaçamento interno (podemos perceber a diferença quando utilizamos a borda
+
+				Podemos aplicar tanto o margin e o padding para qualquer um dos 4 lados e se usarmos apenas margin ou padding, ele aplicará para todos os lados
+
+				Em sentido horário, podemos adicionar so valores usando somente o margin ou padding por exemplo: margin: 30px 20px 10px 5px;*/
+			}
+
+			.divprincipal{
+				margin: -8px;
+				background-color: #151515;
+				padding: 26px;
+				padding-bottom: 28px;
+				color: white;
+				text-align: right;
+				border-bottom: #6A7DD5 2px solid;
+			}
+			#nasa{
+				padding-right: 240px;
+				font-size: 21px;
+				font-family: "Titillium Web", sans-serif;
+
+			}
+			body{
+				background-color: #151515;
+			}
+
+			.divsegundo{
+				margin: 51px 0px 0px 0px;
+			}
+			#primeirobloco{
+				padding: 4px 13px 3px 12px;
+				/*border-radius: 20px;*/
+				background-color: #5777B0;
+				color: white;
+				font-weight: bold;
+				font-family: "Titillium Web", sans-serif;
+				font-size: 17px
+			}
+			#segundobloco{
+				margin-top: 3px;
+				padding: 2px 6px 3px 9px;
+				/*border-radius: 15px;*/
+				background-color:#DADCE3;
+				font-size: 19px;
+				font-family: 'Titillium Web', sans-serif;
+				font-weight: bold;
+
+				
+			}
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="divprincipal">
+			<span id="nasa">NASA TV</span>
+		</div>
+
+		<div class="divsegundo"> 
+			<span id="primeirobloco">Sistemas terrestres</span>
+		</div>
+
+		<div id="segundobloco">
+			Ensaio de Recuperação de Orion Spacecraft em curso
+		</div>	
+
+	</body>
+</html>

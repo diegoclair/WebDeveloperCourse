@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Span e Div</title>
+		<meta charset="utf-8">
+		
+		<style type="text/css">
+			#menu{
+				background-color: gray;
+			}
+
+			#conteudo-principal{
+				background-color: blue;
+			}
+
+			#rodape{
+				border: 1px solid gray;
+			}
+			.verde{
+				color: green;
+			}	
+
+
+		</style>
+
+	</head>
+
+	<body>
+		<!--Div, vem de divisão e serve para dividir os elementos do site
+			Mesmo sem o <br> ele quebra o conteúdo automáticamente-->
+		<div id="menu">
+			Home | Quem somos | Contatos
+		</div>
+		<div id="conteudo-principal">
+			<h2>Conteúdo do Site</h2>
+			<p>Conteúdo</p>
+			
+		</div>
+
+		<!--A div tem quebra de texto no começo e no fim do texto e o span é inline, na mesma linha-->
+		<div id="rodape">
+			Todos os <span class="verde">direitos</span> reservados. 
+		</div><br>
+
+		<div id="rodape">
+			Todos os <div class="verde">direitos</div> reservados. 
+		</div>
+	
+	</body>
+</html>

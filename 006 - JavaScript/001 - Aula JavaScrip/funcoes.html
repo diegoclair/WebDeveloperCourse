@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Funções</title>
+
+        <script>
+            function calculaAreaTerreno(largura, comprimento){
+                //Ao usar o prompt para pegar o texto digitado pelo usuario, sempre vem como string, portanto é bom já aqui na function sempre garantir que iremos fazer a conta com valores númericos e não string
+
+                largura = parseFloat(largura);
+                comprimento = parseFloat(comprimento);
+
+                var area = largura * comprimento;
+                //posso fazer a função sem o return, neste caso, poderia colocar aqui dentro o document.write para escrever o texto na tela
+                return area;             
+            }
+
+            var areaTerreno = calculaAreaTerreno(15, 25);
+            document.write('Opção 1: O terreno possui uma area de ' + calculaAreaTerreno(15, 25) + ' metros² <br>');
+
+            document.write('Opção 2: O terreno possui uma area de ' + areaTerreno + ' metros²<br>');
+
+            var largura = prompt('Digite a largura do seu terreno: ');
+
+            var comprimento = prompt('Digite o comprimento do seu terreno: ');
+
+            var areaTotal = calculaAreaTerreno(largura, comprimento);
+
+            document.write('Opção 3: O comprimento do seu terreno é de: ' + areaTotal + ' metros² <br><br>' );
+
+
+//abaixo opção de colocar tudo de uma vêz, tornaria autosuficiente.
+            document.write('Opção 4: O <b>terreno</b> possui --> ' + calculaAreaTerreno(prompt('Digite a largura do terreno >'), prompt('Digite o comprimento do terreno >')) + ' metros quadrados!');
+            
+            
+        </script>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

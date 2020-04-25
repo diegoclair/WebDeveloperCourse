@@ -1,0 +1,75 @@
+<!doctype html>
+<html> 
+	<head>
+		<title>Formatações de textos</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+
+				/*O tamanho pode ser em pixel, porcentagem ou em "em"
+				Em porcentagem, se você usar 200% ele terá o dobro do tamanho padrão que é 16px
+				Em em, ele sempre será proporcional e seu valor padrão é 16px*/
+
+			div{
+				font-size: 20px;
+			}
+			
+			p{
+				font-family: Georgia;
+			}
+
+			.texto{
+				font-size: 2em; 
+				/*O em padrão equivale 16px, porém, se ele for usado dentro da div, que neste exemplo tem 20px, ele vai equivaler a 20px, ou seja, sempre será proporcional ao tamanho a estrutura superior, caso ele esteja dentro de uma
+				Neste exemplo que a classe está dentro do div lá no body, se utilizarmos 2em, ele sempre será o dobro de pixel do div*/
+			}
+
+			/*no font-weight voce define o peso da fonte, pode ser negrito, normal, itálico e etc..*/
+			.negrito{
+				font-weight: bold; 
+				/*Você pode definir o nível do negrito de 100 até 900. Exemplo: font-weight: 700;*/
+			}
+			.normal{
+				font-weight: normal;
+			}
+			.estilo{
+				font-style: italic; /*temos o oblique que é um pouco mais deitado que o itálico*/
+			}
+
+			.texto-padrao{
+				font: bold 12px "Book Antiqua", serif ; 
+				/*Podemos usar a apenas font e definir o estilo dela*/
+			}
+
+			.format{
+				text-decoration: underline;
+			}
+			.format2{
+				text-decoration: overline;	
+			}
+			.format3{
+				text-decoration: line-through;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+		<h1>Formtação de textos parte 2</h1>
+		<div>
+			<p>Conteúdo com tamanho em 60 pixel</p>
+			<p class="normal">Conteúdo normal</p>
+			<p class="negrito">Conteúdo negrito</p>
+			<p class="estilo">Conteúdo itálico</p>
+			<p class="texto-padrao">Conteúdo com todos os formatos apenas no font</p>
+			<p>Colocando formatação apenas em <span class="format">uma parte</span> do texto</p>
+			<p>Colocando formatação apenas em <span class="format2">uma parte</span> do texto 2</p>
+			<p>Colocando formatação apenas em <span class="format3">uma parte</span> do texto 3</p>
+			<p class="texto">Conteúdo com tamanho em 1em</p>
+		</div>
+		<a href="fontes-cores.html">Voltar para parte 1</a>
+	</body>
+
+
+</html>

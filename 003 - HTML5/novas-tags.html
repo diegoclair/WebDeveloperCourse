@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Introdução ao HTML5</title>
+		<meta charset="utf-8">
+
+<!--  **********  Abaixo é um comentário condicional, para que o html5 seja compatível com navegadores antigos  *********** -->
+<!-- Ele só vai executar o código abaixo se for o navegador for menor que o IE9-->
+<!-- Tutorial e onde pegar o arquivo para a condição abaixo: https://github.com/aFarkas/html5shiv -->
+<!-- Para usar a condição abaixo, é necessário baixar o Html5shivjs.js que fica no link acima dentro da pasta dist-->
+
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		
+<!--Html5shivjs é um plugin-->		
+
+	</head>
+
+	<body>
+		<!--No HTML 5, para criar um cabeçalho ou até um menu por exemplo, teremos tags específocas para isso, não precisamos fazer com divs, como no HTML
+		A vantagem é que esse código pode ser interpretado pelos navegadores de maneira melhor
+		E seu código passa a ter mais significado também-->
+
+
+	<!--nova tag de cabeçalho <header>, um site de busca, saberia que isso é um cabeçalho-->
+		<header> 
+			<h1>Logo</h1>
+			<span>meu site</span>
+		</header>
+
+	<!--nova tag de navegação <nav>-->
+		<nav>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Quem somos</a></li>
+				<li><a href="">Contato</a></li>
+			</ul>
+			Para mais tags novas do HTML5 acesse <a href="http://www.w3schools.com/html/html5_new_elements.asp">aqui</a>
+		</nav>
+
+	<!--Nova tag <article> substitui uma div com id postagem ou noticia por exemplo (conteúdos)-->	
+		<article>
+
+			<h3>Novos Cursos</h3>
+
+			<!--Nova tag para criar seçoes do documento, lembra a div-->
+			<section class="curso-programacao">
+				<h4>Cursos de programação</h4>
+				<p>Lorem inprisum lodr, dolor menta consectetur. Auft semps caompanart
+				testormerto sismetonddt. Vivamus efestas purus des, loboritis nulla elit dignissim lacus.</p>
+				<!--nova tag <time> serve para colocar datas em geral-->
+				<span>Atualizado em: <time datetime="30-06-2017">30/06/2017</time></span>
+			</section>
+
+			<section class="curso-graficos">
+				<h4>Cursos de graficos</h4>
+				<p>Lorem inprisum lodr, dolor menta consectetur. Auft semps caompanart
+				testormerto sismetonddt. Vivamus efestas purus des, loboritis nulla elit dignissim lacus.</p>
+				<span>Atualizado em: <time datetime="10-01-2018">10/01/2018</time></span>
+			</section>
+
+		</article>
+
+		<!--Nova tag aside (ao lado de), pode-se colocar conteúdos que não tem relação com a página-->
+		<aside>
+			<h3>Sobre o Autor</h3>
+			<p>Lorem inprisum lodr, dolor menta consectetur. Auft semps caompanart
+				testormerto sismetonddt. Vivamus efestas purus des, loboritis nulla elit dignissim lacus.</p>
+		</aside>
+
+	<!--nova tag de rodapé <footer>-->
+		<footer>
+			<p>&copy; 2018 - Diego Clair</p>
+		</footer>
+
+	
+	</body>
+
+</html>

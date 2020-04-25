@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Switch</title>
+
+        <script>
+            //vantagem do break é que ele faz a função e se for verdadeira ele já para ali, não fica lendo os cases posteriores
+            //podemos usar sem o break também, e se por exemplo, não colocar o break no case "1", e eu digitar "1" na caixa de diálogo, ele irá executar o 1 e o case 2, isso pode ficar errado, ou pode ser certo caso você queira que a partir de um determinado valor, ele mostre todos os demais abaixo dele.
+
+            /**/
+            
+            var opcao = prompt('Digite um valor de 1 a 2');
+
+            switch (opcao) {  /*Dentro do () colocamos a condicao*/
+                case "1":
+                    document.write('Você digitou 1');
+                    
+                case "2":
+                    document.write('Você digitou 2');
+                    break;
+
+                //o default é opcional e funciona como um else, se não for nenhum dos cases, então faz esse default
+                default:
+                    document.write('Você digitou uma opção diferente da solicitada');
+                    break;
+            }
+        </script>
+
+
+
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Ajax fácil com Jquery puro</title>
+		
+		<!-- bootstrap - link cdn -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- Pego o link CDN na página do site Jquery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+
+            $(document).ready( function(){
+
+                $('.btn_carrega_conteudo').click(function(){
+
+                    var carrega_url = this.id; //this.id vai pegar o id de qual botão foi clicado, id dos botoes que tem a classe btn_carrega_conteudo
+                    carrega_url = carrega_url+'_conteudo.html';
+
+                    $.ajax({
+                        //diferente do javascript que temos que colocar 3 tipos de códigos para atender os diferentes navegadores, aqui no jquery, basta colocar o $.ajax e ele faz tudo correto
+
+                        //passamos a url e se retornar sucesso, basta realizar fazer as ações dentro da function
+
+                        url: carrega_url,
+
+                        success: function(data){ //esse data é retornado na nossa função ajax, recebemos na função e passar no parenteses do html()
+                            $('#div_conteudo').html(data);
+                         },
+                         
+                         //estados do jquery
+                         beforeSend: function () { 
+                             //antes de carregar, mostramos a gif de carregamento
+                             $('#loader').css({display:"block"});
+                          },
+
+                          complete: function () { 
+                              //deois de carregar tudo, deixamos invisivel a gif de carregamento
+                            $('#loader').css({display:"none"});
+                           }
+                    });
+                });
+
+            });
+           
+        </script>
+	
+	</head>
+
+	<body>
+
+		<!-- Static navbar -->
+	    <nav class="navbar navbar-default navbar-static-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	        	<h3>Requisições síncronas e assíncronas</h3>
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container">
+
+	    	<div class="row">
+	    		<div class="col-md-4 center"></div>
+	    		<div class="col-md-4 center">
+                    <!-- Incluímos uma classe btn_carrega_conteudo para conseguir usa-lo como evento de click no jquery e colocar um id para conseguir chamar a página-->
+	    			<a href="#" class="btn btn-primary btn_carrega_conteudo" id="pagina_1">Página 1</a>
+	    			<a href="#" class="btn btn-primary btn_carrega_conteudo" id="pagina_2">Página 2</a>
+	    			<a href="#" class="btn btn-primary btn_carrega_conteudo" id="pagina_3">Página 3</a>
+	    		</div>
+	    		<div class="col-md-4 center"></div>
+	    	</div>
+	    	
+	    	<br />
+	    	<div class="row">
+		    	<div class="col-md-1"></div>
+
+		    	<div class="col-md-10" id="div_conteudo">
+                    <!-- diferente do JS que é no começo, aqui nós colocamos o gif invisivel e vamos habilitar de acordo com o estado no jquery -->
+                    <img src="loader.gif" style="display:none" id="loader">
+                    
+		    	</div>
+		    		
+				<div class="col-md-1"></div>
+			</div>
+
+		</div>	
+	</body>
+</html>

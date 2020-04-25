@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modal</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <a class="btn btn-primary" href="home.html" role="button" style="margin: 10px;">Home</a>
+    <div class="container">
+
+        <div class="page-header">
+            <h1>BootStrap Modal Window</h1>
+        </div>
+
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#janela">
+            <!-- passamos a classe data-toggle e o id no data-target para ele entender que precisa chamar outro item, nesse caso uma div modal -->
+            Logar
+        </button>
+
+        <!-- janela -->
+        <form class="modal fade" id="janela"> <!-- o fade é um efeito "mais bonito" para abrir e fechar a modal -->
+        <!-- Neste caso, usamos o form para conseguir usar o botão logar com o formato "submit" se fosse uma div, ao clicar no botão logar do modal, ele não iria "fechar" o modal -->
+
+            <div class="modal-dialog modal-sm"> <!-- Podemos definir um tamanho para nossa modal -->
+                <div class="modal-content">
+                    <!-- Modal-content já é a janela e aqui criamos os itens que irão compor ela -->
+
+                    <!-- Cabeçalho -->
+                    <div class="modal-header">
+                        <!-- Ao usar o dismiss e o modal, automáticamente ele fecha a classe modal -->
+                        <button type="button" class="close" data-dismiss="modal">
+                            <!-- o &times representa o "x" -->
+                            <span>&times;</span>
+                        </button>
+                        <h4 class="modal-title">Efetuar Login</h4>
+                    </div>
+
+                    <!-- Corpo -->
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                        </div>
+
+                    </div>
+
+                    <!-- Rodapé (esse já deixa alinahdo a direita) -->
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                            Cancelar
+                        </button>
+
+                        <button type="submit" class="btn btn-primary">
+                            Logar
+                        </button>
+
+                    </div> <!-- modal-footer -->
+                </div>
+            </div>
+        </form>
+
+        <br><br>
+        <div>
+            <h4>Para saber mais acesse <a href="http://getbootstrap.com.br/javascript/#modals">aqui</a>.</h4>
+        </div>
+        
+    </div> <!-- container -->
+    
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

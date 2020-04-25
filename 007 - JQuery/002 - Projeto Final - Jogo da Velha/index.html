@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jogo da Velha</title>
+		<script src="jquery-2.2.1.js"></script>
+		<script src="jogo.js"></script>
+
+		<link href="estilo.css" rel="stylesheet">
+		
+
+		<!-- Bootstrap CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		
+		<div id="pagina_inicial" style="margin: 10px;">
+			<table style="width: 600px;" align="center">
+				<tbody>
+					<tr>
+						<!-- colspan 3, ocupa 3 colunas -->
+						<td colspan="3" align="center">JOGO DA VELHA</td>
+					</tr>
+					<tr align="center">
+						<td>
+							<img src="imagens/jogador_1.png">
+							<br>
+							<input id="entrada_nm_jogador1" type="text" maxlength="10" placeholder="Apelido jogador 1" style="border: 0;">
+						</td>		
+						<td><img id="bt_iniciar_jogo" src="imagens/iniciar.png"></td>
+						<td>
+							<img src="imagens/jogador_2.png">
+							<br>
+							<input id="entrada_nm_jogador2" type="text" maxlength="10" placeholder="Apelido jogador 2" style="border: 0;" >
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div> <!-- id="pagina_inicial" -->
+
+		<div id="palco_jogo" style="margin-top: 50px; text-align: center; display: none;">
+			<!-- Colocamos o display none acima para ele iniciar sem ser visualizado no começo. -->
+
+			<div style="display: inline-block">
+				<img id="img_jogador1" src="imagens/jogador_1.png" style="border: solid 1px green;">
+				<br>
+				<span id="nm_jogador1"></span>
+			</div>
+
+			<div style="display: inline-block">
+				<table>
+					<tr> <!-- Primeira linha do jogo -->
+						<td style="border-bottom: solid 1px red; border-right: solid 1px red;">
+							<!-- Criamos a estilotabela no arquivo estilo.css e usaremos a classe jogada no jquery -->
+							<div class="estiloTabela jogada" id="a-1"></div>
+						</td>
+						<td style="border-bottom: solid 1px red; border-right: solid 1px red;">
+							<div class="estiloTabela jogada" id="a-2"></div>
+						</td>
+						<td style="border-bottom: solid 1px red;">
+							<div class="estiloTabela jogada" id="a-3"></div>
+						</td>
+					</tr>
+					<tr> <!-- Segunda linha do jogo -->
+						<td style="border-bottom: solid 1px red; border-right: solid 1px red;">
+							<div class="estiloTabela jogada" id="b-1"></div>
+						</td>
+						<td style="border-bottom: solid 1px red; border-right: solid 1px red;">
+							<div class="estiloTabela jogada" id="b-2"></div>
+						</td>
+						<td style="border-bottom: solid 1px red;">
+							<div class="estiloTabela jogada" id="b-3"></div>
+						</td>
+					</tr>
+					<tr> <!-- Terceira linha do jogo -->
+						<td style="border-right: solid 1px red;">
+							<div class="estiloTabela jogada" id="c-1"></div>
+						</td>
+						<td style="border-right: solid 1px red;">
+							<div class="estiloTabela jogada" id="c-2"></div>
+						</td>
+						<td>
+							<div class="estiloTabela jogada" id="c-3"></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div style="display: inline-block">
+				<img id="img_jogador2" src="imagens/jogador_2.png" style="border: solid 1px white;">
+				<br>
+				<span id="nm_jogador2"></span>
+			</div>
+
+		</div> <!-- id="palco_jogo" -->
+
+
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>

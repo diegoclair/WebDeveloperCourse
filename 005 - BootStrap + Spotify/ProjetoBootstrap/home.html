@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seção BootStrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="page-header">
+            <h1>BootStrap
+                <small>Seção</small>
+            </h1>
+        </div>
+
+        <h4>Seção BootStrap do <b>Curso de Desenvolvimento WEB:</b></h4>
+
+        <a class="btn btn-primary"  href="alert.html"      style="margin-bottom: 3px;" role="alert">Alert             </a>
+        <a class="btn btn-default"  href="botoes.html"     style="margin-bottom: 3px;" role="botoes">Botões           </a>
+        <a class="btn btn-danger"   href="formulario.html" style="margin-bottom: 3px;" role="formulario">Formulário   </a>
+        <a class="btn btn-info"     href="icones.html"     style="margin-bottom: 3px;" role="ícones">Ícones           </a>
+        <a class="btn btn-warning"  href="imagens.html"    style="margin-bottom: 3px;" role="imagens">Imagens         </a>
+        <a class="btn btn-primary"  href="index.html"      style="margin-bottom: 3px;" role="index">Index             </a>
+        <a class="btn btn-default"  href="modal.html"      style="margin-bottom: 3px;" role="modal">Modal             </a>
+        <a class="btn btn-danger"   href="navegacao.html"  style="margin-bottom: 3px;" role="navegacao">Navegação     </a>
+        <a class="btn btn-info"     href="tabs.html"       style="margin-bottom: 3px;" role="tabs">Tabs               </a>
+        <a class="btn btn-warning"  href="tabelas.html"    style="margin-bottom: 3px;" role="tabelas">Tabelas         </a>
+        <a class="btn btn-primary"  href="tooltip.html"    style="margin-bottom: 3px;" role="tabs">Tooltip & Popover  </a>
+
+        <br><br><br><br><br><br>
+        <h1 style="border: 1px solid red; background-color: yellow;">
+            <b>VEJA ESSE <a href="https://themes.getbootstrap.com/products/dashboard">TEMA</a> COMO BASE PARA CRIAR O SITE DE CONTROLE DE INCIDENTES</b>
+        </h1>
+
+    </div> <!-- container -->
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Para iniciar o tooltip e o popover automaticamente (é necessiário ter o jquery acima) -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

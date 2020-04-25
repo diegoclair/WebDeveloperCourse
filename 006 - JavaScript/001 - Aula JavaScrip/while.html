@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>While</title>
+
+        <script>
+            //dentro do parentes, colocamos a condição, e ele fará os comandos dentro da chave{} até a condição ser falsa.
+
+            var x = 1;
+            while( x <= 12){
+
+                document.write('Olá ' + x + '<br>');
+
+                //existe uma opção continue, porém tem que ter muito cuidado ao usar ela, pois se eu colocar ela conforme abaixo, antes do incremento ou sem o incremento, terei um looping infinito, pois o continue faz pular os códigos e que tem abaixo dele e voltar para a condição do while
+
+                if(x == 4){
+                    x++;
+                    x++;
+                    x++;
+                    document.write('Aqui eu vou pular 3' + '<br>');
+                    continue;
+                    //se o olá estivesse após esse if do continue, ele iria pular a escrita do 4 e continuar o while
+                }
+
+                x++; //se eu não fizesse isso, ele entraria em loop, pois o x sempre seria igual a 1
+
+                //posso parar antes de finalizar a condição do while
+                if (x == 11){
+                    document.write('Aqui tem um break para parar se for 11' + '<br>' + '<br>');
+                    break;
+                }
+            }
+
+            //o Do While vai sempre executar o primeiro comando dentro do DO, mesmo se a condição já entrar falsa no while... Ele vai executando até ser falso..
+            var x = 1;
+            do{
+                x = x + 2;
+                document.write('O valor de x é: ' + x + '<br>');
+
+                //tambem podemos usar aqui..
+                //break
+                //continue
+                
+            } while(x <= 10);
+
+
+
+        </script>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

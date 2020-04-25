@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+		<script src="jogo.js"></script>
+
+	</head>
+
+	<body onload="inicioJogo()">
+		<div style="float: left; width:auto;height: 500px; background: #FFF; border: solid 1px #A2A2A2; margin-right: 10px; ">
+			<!-- Balão cheio -->
+			<table>
+				<tr>
+					<td>
+						<img src="imagens/balao_azul_grande.png">
+					</td>
+					<td>
+						<!-- Criamos um span para preencher com a quantidade de balões lá no arquivo .js -->
+						<span id="baloes_inteiros" style="font-size: 40px;"></span>
+					</td>
+				</tr>
+			</table>
+			<br>
+
+			<!-- Balão estourado -->
+			<table>
+				<tr>
+					<td>
+						<img src="imagens/balao_azul_grande_estourado.png">
+					</td>
+					<td>
+						<span id="baloes_estourados" style="font-size: 40px;"></span>
+					</td>
+				</tr>
+			</table>
+			<br>
+
+			<!-- Cronometro -->
+			<table style="width: 140px; height: 132px;">
+				<!-- Fixamos o tamanho dessa tabela igual ao tamanho da imagens para colocarmos a img como backgroud da td 
+				Para saber o tamanho da imagem, podemos selecionar ela no windows e ver as propriedades da mesma-->
+				<tr>
+					<td style="background: url('imagens/cronometro.png'); text-align: center; padding-left: 5px; padding-top: 5px;" >
+					<!-- Para deixar o texto do span alinhado no centro da imagem, usamos o text-align: center -->
+						<span id="cronometro" style="color: red; font-size: 30px;"> </span>						
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div id="cenario" style="float: left; width: 600px; height: 500px; background: url('imagens/cenario.png'); background-position: bottom">
+			<!-- A imagem acima fica um pouco grande, e queremos que apareça mais a grama dela do que o céu, para isso usaremos a propriedade background-position: bottom, ele sobe um pouco mais a imagem
+			é tipo ele preencher de cima pra baixo, o que passar na parte de baixo ele perde, ai essa propriedade serve pra ele usar a parte de baixo e se passar, perder a parte de cima..-->
+
+		</div>
+	</body>
+	
+</html>

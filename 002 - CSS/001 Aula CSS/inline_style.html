@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Meu site</title>
+		<meta charset="utf-8">
+
+	<!--Colocando conteúdo CSS, dentro do própio arquivo <head>, sem precisar colocar inline (diretamente no conteúdo/linhas do corpo-->
+
+		<style type="text/css">
+		/*Aqui dentro do style, podemos colocar tanto código CSS como JavaScript*/
+
+		/*Seletor css para facilitar a manutenção da formatação no código
+		Ele altera todos os <p> do corpo*/	
+
+		p {
+			color: blue;
+			border: 1px solid green;
+		}
+
+		/*Podemos usar para qualquer tag do <body>
+		Abaixo irá alterar o font-size de todos os <h1> do corpo*/
+		h1 {
+			font-size: 40px;
+		}
+
+
+		/*Se temos dois paragrafos de uma cor e dois de outro? Para resolver isso, usamos classes*/
+
+		/*Para criar uma classe, utilizamos ponto "." + o nome da classe*/
+
+		.paragrafo{
+			color: purple;
+		}
+
+		/*O correto é aplicar no elemento <p> o que for mais utilizado
+		e nas tags específicas, utilizamos uma classe*/
+
+		.pink{
+			color: pink;
+		}
+
+		/*Podemos criar um ID utilizado a hashtag a única diferença é que um começa com ponto e o outro com a hashtag
+
+		POREM: o id não é recomendado que você o utilize mais de uma vez, porque ele é único*/
+
+		#verde{
+			color:  green;
+		}
+
+		</style>
+
+	</head>
+<!--Estilo inline você coloca a formatação direto no texto
+geralmente não é a mais recomendada, mas vezes é usado-->
+
+	<body>
+
+		<h1 id="verde">Estilo CSS (Cascading Style Sheets)</h1>
+
+<!--Exemplo de estilo inline (style), você pode colocar diretamente nas tags mais usadas, como <p> <h1> <body> e etc.. -->
+<!--no exemplo abaixo temos o style com a formatação CSS, detalhe que sempre termina com o ";" a cada formatação css-->		
+		
+		<!--Atributo: color / valor: blue / finalização: ; -->
+
+		<!--<p style="color: blue; border: 1px solid green;">-->
+
+		<!--Como usamos a formatação lá no head diretamente na tag <p>, não precisamos aqui fazer a formatação inline (acima comentado), podemos apenas deixar o <p> e ele receberá a função definida no head-->
+		<p>	
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non lacus vel dolor dapibus maximus. Mauris diam nulla, hendrerit vitae risus vitae, interdum aliquam libero. Pellentesque condimentum tellus lectus, convallis rutrum dui gravida non. Nulla hendrerit libero sit amet egestas mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse gravida, mauris at aliquet accumsan, ipsum nunc aliquam erat, vitae ultrices ipsum ligula vel velit. Vestibulum lacinia luctus erat in tristique. Vestibulum vitae congue velit, id rhoncus ipsum. Suspendisse nec leo a est sodales bibendum vel sodales orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+		<!--Aqui podemos repetir a formatação do paragro acima (inline), porém isso irá dificultar a manutenção do código, pois se alterar um, sempre terá que mexer duas vezes-->
+
+  		<!--	<p style="color: blue; border: 1px solid green;">-->
+
+  		<!--Para não ter que fazer duas vezes, utilizamos a formatação CSS diretamente no <head>-->
+  		
+  		<p class="paragrafo"> 	
+  			Aliquam porta lacus quis suscipit hendrerit. Pellentesque molestie tellus velit. Sed et consequat leo. Nulla at ipsum semper, commodo arcu eu, tempor arcu. Cras blandit, orci vitae placerat rutrum, ipsum elit sagittis dolor, eu tincidunt sapien metus placerat odio. Praesent in aliquet lectus. Maecenas eget est vestibulum, gravida eros scelerisque, scelerisque mauris. Praesent semper, neque congue sollicitudin porttitor, eros sem fermentum nibh, non rutrum neque purus at nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum tellus metus, vel pharetra mi bibendum eu. Nam porttitor faucibus tempor. Sed viverra sollicitudin ante, eu iaculis neque ornare a. Phasellus scelerisque mauris in nisi bibendum, ac scelerisque risus dictum. Vivamus in odio urna.
+		</p>
+
+		<h1 class="pink">Estilo CSS (Cascading Style Sheets)</h1>
+
+		<!--Mas, podemos usar uma formatação Inline diretamente na tag <p> e ela será formatada ignorando a formatação do head-->
+
+		<p>	
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non lacus vel dolor dapibus maximus. Mauris diam nulla, hendrerit vitae risus vitae, interdum aliquam libero. Pellentesque condimentum tellus lectus, convallis rutrum dui gravida non. Nulla hendrerit libero sit amet egestas mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse gravida, mauris at aliquet accumsan, ipsum nunc aliquam erat, vitae ultrices ipsum ligula vel velit. Vestibulum lacinia luctus erat in tristique. .</p>
+
+		<p>	
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non lacus vel dolor dapibus maximus. Mauris diam nulla, hendrerit vitae risus vitae, interdum aliquam libero. Pellentesque condimentum tellus lectus, convallis rutrum dui gravida non. Nulla hendrerit libero sit amet egestas mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse gravida, mauris at aliquet accumsan, ipsum nunc aliquam erat, vitae ultrices ipsum ligula vel velit. Vestibulum lacinia luctus erat in tristique. .</p>
+	</body>
+</html>

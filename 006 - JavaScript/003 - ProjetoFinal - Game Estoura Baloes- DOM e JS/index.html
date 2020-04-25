@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+		<script language='Javascript'>
+			function iniciaJogo(){
+				//antes de fazer os comandos com base no que foi recuperado abaixo, podemos fazer um teste usando o alert para saber se ele esta trazendo o valor correto de acordo com o id
+				var nivel_jogo = document.getElementById('nivel_jogo').value;
+
+				//para mudar o html, podemos usar a o comando abaixo, porémnão é muito utilizado essa função no JS para mudar o a página, mas como estamos no curso de JS, vamos fazer essa mudança por aqui para aprender
+				window.location.href = 'jogo.html?'+nivel_jogo;
+				//para passar o parametro para a outra página, podemos concatenar o valor recuperado com o caminho da outra página, conforme acima, adicionando o "?" e o sinal de +. Novamente, esse método não é o utilizado geralmente, mas por hora, iremos aprender assim
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<div>
+			<p> <!-- Opções para selecionar o nivel do jogo -->
+				<b>Nivel: </b> 
+				<select id="nivel_jogo">
+					<option value="1">Fácil</option>
+					<option value="2">Normal</option>
+					<option value="3">Dificil</option>
+				</select>
+			</p>
+			<br>
+
+			<!-- Imagem com evento de onclick -->
+			<img src="imagens/iniciar.png" onclick="iniciaJogo()">
+
+		</div>
+
+	</body>
+	
+</html>

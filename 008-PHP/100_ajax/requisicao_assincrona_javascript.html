@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Ajax fácil com JS puro</title>
+		
+		<!-- bootstrap - link cdn -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+        <script type="text/javascript">
+
+            var httpRequest;
+            
+            function fazerRequisicao(url, destino) {
+
+                //abaixo, ele coloca uma gif enquanto o state não é 4 e o status nao é 200, que seria o tempo em que ele demoraria para carregar um conteúdo, se for muito pesado, ele iria ficar rodando essa gif abaixo de carregamento
+                document.getElementById(destino).innerHTML = '<center><img src="loader.gif"></center>';
+
+        //abaixo temos as 3 opções para navegadores atuais, mais antigos e muito antigo, para tentarmos instanciar o xmlhttprequest
+
+                if (window.XMLHttpRequest) { //navegadores mais recentes instancia esse objeto
+                    httpRequest = new XMLHttpRequest();
+                } else if (window.ActiveXObject) {
+                    try {
+                        httpRequest = new ActiveXObject("Msxml2.XMLLHTTP")
+                    } catch (e) {
+                        try {
+                            httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            alert('Impossível instanciar o objeto xmlhttprequest para este navegador/versão')
+                        }
+                    }
+                    
+                }
+
+                if (!httpRequest) {
+                    alert('Erro ao tentar criar uma instância do objeto XMLHTTPREQUEST')
+                    return false;
+                }
+
+                //se chegar até aqui, é porque nosso objeto está criado, portanto temos que chamar a requisição lá embaixo com o evento de onclick
+
+                //Dps de conseguir instanciar, temos chamar o método open para fazer a requisição
+                
+                /*alert (url);
+                alert(destino);*/
+                
+                //a funcao onreadystatechange fica 'escutando' todos os 'estados' do httpRequest
+                httpRequest.onreadystatechange = situacaoRequisicao;
+
+                httpRequest.open('GET' , url);   
+                httpRequest.send();       
+
+            } //function fazerRequisicao
+
+            function situacaoRequisicao() {
+        //STATE
+        //0 - UNSENT	Um cliente foi criado. Mas o método open()  não foi chamado ainda.
+        //1 - OPENED	O método open() foi chamado.
+        //2 - HEADERS_RECEIVED	o método send() foi chamado e os cabeçalhos e status estão disponíveis.
+        //3 - LOADING	Baixando e responseText contem os dados parciais.
+        //4 - DONE	    Operação concluída.
+                if (httpRequest.readyState == 4) { 
+                    if (httpRequest.status == 200) {
+                        //200 sigifica que meu servidor respondeu que está tudo OK
+                        //404 significa que está tudo Ok mas a página que eu chamei não existe
+                        document.getElementById('div_conteudo').innerHTML = httpRequest.responseText;
+                        //o document.get.. é a forma que eu encontro um objeto pelo javaScript e o innet html é para colocar o conteúdo dentro da tag.
+
+                    }
+                }
+            }
+            
+        </script>
+	
+	</head>
+
+	<body>
+
+		<!-- Static navbar -->
+	    <nav class="navbar navbar-default navbar-static-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	        	<h3>Requisições síncronas e assíncronas</h3>
+	        </div>
+	      </div>
+	    </nav>
+
+
+	    <div class="container">
+
+	    	<div class="row">
+	    		<div class="col-md-4 center"></div>
+	    		<div class="col-md-4 center">
+                    <!-- Aqui vamos usar o método de onclick para chamar nossa função que faz a requisição e vamos passar o conteúdo que queremos buscar e onde iremos colocar esse conteúdo, neste caso em uma div mais pra baixo com id div_conteudo -->
+	    			<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pagina_1_conteudo.html', 'div_conteudo')">Página 1</a>
+	    			<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pagina_2_conteudo.html', 'div_conteudo')">Página 2</a>
+	    			<a href="#" class="btn btn-primary" onclick="fazerRequisicao('pagina_3_conteudo.html', 'div_conteudo')">Página 3</a>
+	    		</div>
+	    		<div class="col-md-4 center"></div>
+	    	</div>
+	    	
+	    	<br />
+	    	<div class="row">
+		    	<div class="col-md-1"></div>
+
+		    	<div class="col-md-10" id="div_conteudo">
+		    			
+		    	</div>
+		    		
+				<div class="col-md-1"></div>
+			</div>
+
+		</div>	
+	</body>
+</html>

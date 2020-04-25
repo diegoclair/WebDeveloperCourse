@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Eventos - Mouse</title>
+
+
+        <script>
+        //os eventos são ações do usuário, como por exemplo, mover o mouse, recarregar a página, clique em alguma tecla, foco do cursor do mouse e um bloco do site e etc.
+
+        // 5 dos principais eventos:
+        //onclick       - Ao dar um clique em algum elemento
+        //ondblclick    - Ao dar dois cliques em uma elemento
+        //onmousedown   - NO onclick, se eu clicar e soltar fora do quadro, ele não aparece a mensagem, já nesse, se voce clicar, antes mesmo de soltar, ele já aparece a mensagem
+        //onmouseover   - Quando você passa o mouse em cima da imagem ele já chama a função
+        //onmouseout    - Aqui é quando estamos dentro do elemento e ao sair com o mouse, ele chama a function, esse você vê em diversos sites, pois acham que você vai fechar a página e ai já coloca uma mensagem na tela oferencendo desconto
+
+        //para isso temos que criar um elemento no body, pode ser <p> <div>, tanto faz, e lá podemos chamar a nossa function dentro de um evento, ou podemos colocar direto lá
+
+        //podemos associar mais de um evento também
+
+
+        function msgBoasVindas(){
+            alert('Seja bem vindo');
+        }    
+        
+        </script>
+
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body >
+        <h1 class="text-center">Hello World</h1>
+
+        <div onmouseout="msgBoasVindas()"; style="background: #CCC; height: 150px; width: 150px;">
+
+        </div>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

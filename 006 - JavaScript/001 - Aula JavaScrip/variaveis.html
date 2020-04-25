@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Variáveis</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <script type="text/javascript">
+
+            //string
+            var texto = "Aula de ";
+            var texto2 = "JavaScript";
+
+            //float
+            var numeroFracionado = 10.7;
+            
+            // int
+            var numero = -7;
+
+            //bloolean
+            var teste = true;
+            //as variáveis de JS não precisam de um tipo, elas recebem seu tipo de acordo com o que está sendo colocado dentro dela.
+
+            alert(teste);
+
+            //com o console.log podemos exibir um log, que pode ser acessado pelo console do chrome e ir acompanhando o histórico por exemplo
+            console.log('------------------------------------');
+            console.log(numeroFracionado);
+            console.log('------------------------------------');
+
+            //formas de concatenar
+            document.write(texto);
+            document.write('<br><br>');
+            document.write(texto2);
+
+            document.write('<br><br>');
+            document.write(texto + texto2);
+
+            //concatenar pegando dado na tela:  
+            document.write('<br><br>');          
+            document.write("Olá " + prompt('digite o seu nome:'));
+
+            //array funciona para criar listas, ele sempre criará da posição 0 e vai criando de acordo com a quantidade de itens
+            
+            var lista_frutas = Array('Pera', 'Laranja', 'Morango', 'Uva');
+            alert(lista_frutas[2]); //morango
+
+            //podemos criar um array com a posição que quisermos
+            var lista_frutas2 = Array(); 
+
+            lista_frutas2[1] = 'Pera';
+            lista_frutas2[2] = 'Laranja';
+            lista_frutas2[3] = 'Morango';
+            lista_frutas2[4] = 'Uva';
+
+            alert(lista_frutas2[2]); //laranja
+
+            //ao invez de escrever Array, podemos apenas colocar os colchetes []; ele tb entenderá que é um array
+
+            
+            //array multidimensional, exemplo de arrays dentro de outro array
+            var lista_coisas = Array;
+
+            lista_coisas['frutas'] = Array('Abacate', 'Pessego', 'Caqui', 'Manga');
+            lista_coisas['pessoas'] = Array('Diego','jorge','jamilton','gabriel' );
+
+            document.write('<br><br>'); 
+            document.write(lista_coisas['pessoas'][3],lista_coisas['frutas'][1]);
+
+            //Operadores de comparação
+
+            /*
+
+            ==          Valores são iguais?
+            ===         Valores são iguais e do mesmo tipo? ex: 2 === '2'
+            !=          Valores são diferentes?
+            <>          Valores são diferentes?
+            !==         Valores diferentes e ou tipos diferentes? 5 !== 7 sim!
+            <           Valor da esquerda é menor que o da direita?
+            >           Valor da esquerda é maior que o da direita?
+            <=          Valor da esquerda ou igual é menor que o da direita?
+            >=          Valor da esquerda ou igualé maior que o da direita?
+
+            */
+
+            //Operadores de Lógicos
+            /* 
+            
+            &&      E
+            ||      OU
+            
+            !       Fator de negação, coloque antes da condição ex: !(2 == 2) resultado seria true, mas como tem o fator de negação, o resultado será false, se fosse falso, ele trocaria para verdadeiro, portanto ele inverte o resultado
+
+            */
+            
+        
+
+
+        </script>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

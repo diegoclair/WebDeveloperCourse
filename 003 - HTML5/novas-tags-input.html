@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Novas tags input HTML5</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<form>
+
+		<!-- Associar Label com os elementos - Boa prática -->
+		<!-- atributo AUTOFOCUS para quando abrir a pagina, já vir selecionado o nome -->
+		<label for="nome">Nome</label>
+		<input type="text" id="nome" autofocus required>
+		<!--Quando faz essa associação, ao clicar no texto "Nome" ele já pula pra você digitar no campo-->
+		<br>
+		<br>
+
+		<!--Novos Inputs e atributos HTML 5-->
+		<!-- Email -->
+		<!-- atributo REQUIRED para dizer que o campo é obrigatório-->
+		<label for="email">Email</label>
+		<input type="email" id="email" placeholder="teste@teste.com.br" required>
+		<!--A diferença é que agora voce tem tipos diferentes de input, por exemplo o email -->
+		<br>
+		<br>
+		<!--Detalhe que é preciso verificar em quais navegadores são suportados essas novas tags-->
+
+		<!-- Número -->
+		<label for="numero">Número</label>
+		<input type="number" id="numero" min="5" max="10" step="2">
+		<!--O valor minimo no campo tem que ser 5 e o max tem que ser 10, ao alterar pelas setas, ele muda de 2 em 2-->
+		<br>
+		<br>
+
+		<!-- Url -->
+		<!-- atributo PLACEHOLDER é a dica que podemos dar no campo -->
+		<label for="url">Url</label>
+		<input type="url" id="url" placeholder="ex: http://www">
+		<!--Aceita somente links e com http-->
+		<br>
+		<br>
+
+		<!-- Pesquisa -->
+		<label for="pesquisa">Pesquisa</label>
+		<input type="search" id="pesquisa" placeholder="Digite algo..">
+		<!--Aparece o "x" pra você deletar o que você escreveu-->
+		<br>
+		<br>
+
+		<!-- Range -->
+		<label for="range">Range</label>
+		<input type="range" id="range" min="1" max="10" value="5">
+		<!--Definomos 10 posições e colocamos o valor 5, então ele já trás no meio-->
+		<br>
+		<br>
+
+		<!-- Data -->
+		<label for="data">Data</label>
+		<input type="date" id="data">
+		<!--Podemos escolher uma data ou digitar e também ir mudando na seta, também teremos o botão de limpar-->
+		<br>
+		<br>
+
+		<!-- Cor -->
+		<label for="cor">Cor</label>
+		<input type="color" id="cor">
+		<!--Ele vai abrir uma caixa de cor, ex: cor do perfil, ou background do site e etc.-->
+		<br>
+		<br>
+
+		<!--Botão enviar-->
+		<input type="submit" name="botao-enviar" value="Enviar">
+
+	</form>
+
+</body>
+
+</html>

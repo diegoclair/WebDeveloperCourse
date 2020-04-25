@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabs BootStrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <a class="btn btn-primary" href="home.html" role="button" style="margin: 10px;">Home</a>
+
+    <div class="container">
+
+        <div class="page-header">
+            <h1>Tabs BootStrap</h1>
+            <p class="lead">Alterne facilmente entre conteúdos</p><br>
+            <!-- lead é uma classe que aplica formatação para subtítulos -->
+        </div><!-- page-header -->
+        
+        <div role="tabpanel">
+            <h4>Nav-tabs</h4>
+            <!-- Nav tabs --><!-- Criação das abas -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="informações" class="active">
+                    <a href="#info" aria-controls="tab" role="tab" data-toggle="tab">Informações do Produto</a>
+                    <!-- O link <a> precisa estar apontado para o ide no tabe-panel -->
+                    <!-- Precisamos colocar o data-toggle como tab para ele entender corretamente -->
+                </li>
+
+                <li role="avaliacoes">
+                    <a href="#avaliacoes" aria-controls="tab" role="tab" data-toggle="tab">Avaliações</a>
+                </li>
+
+                <li role="compre tambem">
+                    <a href="#compre" aria-controls="tab" role="tab" data-toggle="tab">Compre também</a>
+                </li>
+            </ul>
+        
+            <!-- Tab panes --><!-- Conteúdo das abas -->
+            <div class="tab-content">
+                <!-- Aba informações -->
+                <div role="tabpanel" class="tab-pane active" id="info">
+                    <h3>Informações</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit informações</p>
+                </div>
+
+                <!-- aba avaliações -->
+                <div role="tabpanel" class="tab-pane" id="avaliacoes">
+                    <h3>Avaliações</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit avaliações</p>
+                </div>
+
+                <!-- aba compre tambem -->
+                <div role="tabpanel" class="tab-pane" id="compre">
+                    <h3>Compre Também</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit compre também</p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div><!-- Container-->
+
+<!-- NAV PIILS -->
+<hr>
+    <div class="container">
+        
+        <div role="tabpanel">
+            <h4>Nav-pills</h4>
+            <!-- Nav tabs --><!-- Criação das abas -->
+            <ul class="nav nav-pills" role="tablist">   <!-- NAV PILLS -->
+                <li role="informações" class="active">
+                    <a href="#info1" aria-controls="tab" role="tab" data-toggle="tab">Informações do Produto</a>
+                </li>
+
+                <li role="avaliacoes">
+                    <a href="#avaliacoes1" aria-controls="tab" role="tab" data-toggle="tab">Avaliações</a>
+                </li>
+
+                <li role="compre tambem">
+                    <a href="#compre1" aria-controls="tab" role="tab" data-toggle="tab">Compre também</a>
+                </li>
+            </ul>
+        
+            <!-- Tab panes --><!-- Conteúdo das abas -->
+            <div class="tab-content">
+                <!-- Aba informações -->
+                <div role="tabpanel" class="tab-pane active" id="info1">
+                    <h3>Informações</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit informações</p>
+                </div>
+
+                <!-- aba avaliações -->
+                <div role="tabpanel" class="tab-pane" id="avaliacoes1">
+                    <h3>Avaliações</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit avaliações</p>
+                </div>
+
+                <!-- aba compre tambem -->
+                <div role="tabpanel" class="tab-pane" id="compre1">
+                    <h3>Compre Também</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit compre também</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br>
+        <div>
+            <h4>Para saber mais acesse
+            <a href="https://getbootstrap.com/docs/3.3/javascript/#buttons">aqui</a>.</h4>
+        </div>
+
+    </div><!-- Container-->
+    
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Para iniciar o tooltip e o popover automaticamente (é necessiário ter o jquery acima) -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

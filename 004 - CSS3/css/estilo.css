@@ -1,0 +1,152 @@
+/*----------------      CSS3       -----------------*/
+
+/*-------- Transparência CSS3 ---------*/
+#caixa {
+  width: 300px;
+  height: 300px;
+  background: url("../img/camera.png");
+
+  /*o estilo.css está dentro da pasta css, para ver a imagem, precisamos voltar uma pasta e depois entrar na pasta img e 
+	para isso usamos o ../ */
+}
+
+/*Para formatar apenas o h1 que está dentro do id caixa, fazemos da seguinte forma:*/
+#caixa h1 {
+  background: rgba(255, 255, 255, 0.2);
+  /*O rgba, no último parametro definimos a transparência de 0 até 1*/
+  border-bottom: 2px solid #ffffff;
+}
+
+/*--------- radial-gradient CSS3 ---------*/
+#caixa2 {
+  width: 300px;
+  height: 300px;
+  /*background: linear-gradient(165deg, red,yellow);*/
+  /*Podemos definir to right, to left, to top, to bottom
+	O to bottom é o padrão
+	No lugar do to right, podemos colocar 80deg por exemplo, são graus e você pode definir o valor que você quiser*/
+
+  background: radial-gradient(yellow, red, yellow, blue);
+  /*Temos também o radial-gradient e podemos definir duas ou mais cores*/
+}
+/*----- box-sizing CSS3 -----*/
+#box {
+  width: 300px;
+  height: 300px;
+  background-color: #b9c941;
+  padding: 50px;
+  margin: 5px;
+  float: left;
+
+  /*o paddding tb faz parte da largura, com 10px por exemplo
+	ele terá 320 de largura por 320 de altura
+	Se usarmos o método abaixo de box-sizing (css3), ele irá materi o tamanho
+	definido no width e height*/
+  box-sizing: border-box;
+
+  /*Para funcionar o box-sizing em modelos antigos do chrome e
+	mozila firefox, temos que usar os prefix abaixo (-webkit- e -moz-, 
+	disponiveis em:	https://www.w3schools.com/cssref/css3_pr_box-sizing.asp*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+/*----- border-radius CSS3 -----*/
+#box2 {
+  width: 300px;
+  height: 300px;
+  background-color: #868686;
+  padding: 50px;
+  margin: 5px;
+  float: right;
+  /*border-radius é do css3 e podemos definir
+	o pixel para cada um dos 4 lados dela*/
+
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
+/*---------- Sombras CSS3 ----------*/
+#box3 {
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+  padding: 8px;
+  background: #009670;
+  /*Podemos colocar a sobra nas caixas também, abaixo a explicação dos parametros necessários que temos que passar*/
+  /*box-shadow: 4px 4px 2px 20px #990000;*/
+  /*Temos ainda o 4 parametro é que o espalhamento da sobra, ele espalha ela um pouco mais conforme código acima*/
+
+  /*Podemos também definir duas sombras conforme abaixo:*/
+  box-shadow: 10px 10px 2px #000000, -10px -10px 2px #ee0000;
+
+  /*A sombra nunca ocupa espaço no seu projeto, ela não interfere nos tamanhos e layouts, fica apenas no fundo*/
+}
+
+#box3 h1 {
+  color: white;
+  font-size: 50px;
+  /*Para usar sombras, utlizamos a propriedade abaixo Propriedades: Horizontal, Vertical, blur(desfoque da sombra) e Cor*/
+  /*text-shadow: 5px 5px 5px black;*/
+  text-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+  /*No parametro cor, podemos também utilizar a transparência*/
+}
+
+/*----------------------- Animações ----------------------- */
+/*Criar a regra da animação*/
+@keyframes animacao-box {
+  /*Estado inicial da animação "from" */
+  from {
+    background-color: red;
+    border-radius: 0px;
+    top: 0;
+    left: 0
+  }
+
+  /*Estado final da animação    "to"  */
+  to {
+    background-color: yellow;
+    border-radius: 300px;
+	top: 250px;
+    left: 300px;
+  }
+  /*Se o box-animacao tem tamanho 300, com radius 300 ele fica redondo*/
+}
+
+#box-animacao {
+  width: 300px;
+  height: 300px;
+  background: red;
+  position: relative; /*para conseguirmos mexer o objeto*/
+
+  /*Difinimos no kyframes a animação e aqui iremos chamar ela e passar os parametros, ela pode ser chamada em várias ids ou classes*/
+
+  /*animation-name: animacao-box;
+  animation-duration: 5s;
+  animation-delay: 2s; */
+  /*tempo antes de começar a animação*/
+  /*animation-iteration-count: 2; */
+  /*quantas vezes ele fará a animação*/
+  /*animation-direction: alternate;*/
+
+  /*Animation-direction alternate ele fez o primeiro iteration-count do from pro to e o segundo ele fez do to pro from*/
+
+ /*Toda a animação que fizemos acima, poderíamos ter colocado conforme abaixo*/
+  animation: animacao-box 5s 2s 2 alternate;
+}
+
+/* --------------------- Transições ---------------------*/
+
+#box-transicao{
+	width: 300px;
+	height: 300px;
+	background-color: orange;
+}
+/*hover: quando passar o mouse em cima*/
+#box-transicao:hover{
+	/*width: 400px;*/
+	background-color: black;
+	transition: /*background 3s, width 8s*/ all 2s;
+	/*Acima, colocamos o tempo para fazer as ações definidas acima do transition*/
+	/*Podemos definir um tempo para cada atributo ou um  tempo para todos atributos*/
+}

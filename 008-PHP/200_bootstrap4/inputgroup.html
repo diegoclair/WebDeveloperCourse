@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Input Group</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style type="text/css">
+        .row {
+            margin-bottom: 10px;
+        }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="input-group mt-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="input1">@</span>
+                    </div>
+                    <input type="text" class="form-control" name="input1" placeholder="Nome de Usuário" aria-label="Nome de Usuário" aria-describedby="input1">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="input-group mt-2">
+                    <input type="text" class="form-control" name="input1" placeholder="Nome de Usuário" aria-label="Nome de Usuário" aria-describedby="input1">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="input1">@seudominio.com.br</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="input-group mb-3 mt-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">R$</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        Tem muita coisa se voce pesquisar pelo input group no bootstrap 4
+        <div class="row">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            </div>
+                
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+                
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Input com checkbox">
+            </div>
+                
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with radio button">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="">First and last name</span>
+                    </div>
+                    <input type="text" class="form-control">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                    <span class="input-group-text">0.00</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+                
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <div class="input-group-append">
+                    <span class="input-group-text">$</span>
+                    <span class="input-group-text">0.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+            </div>
+                    
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+            </div>
+                    
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+            </div>
+                    
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+                
+            <div class="input-group mb-3">
+                <select class="custom-select" id="inputGroupSelect02">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <div class="input-group-append">
+                    <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                </div>
+        </div>
+                
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+                <select class="custom-select" id="inputGroupSelect03">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+                
+            <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect04">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

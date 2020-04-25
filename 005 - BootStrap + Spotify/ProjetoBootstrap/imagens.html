@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Imagens Responsivas</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <a class="btn btn-primary" href="home.html" role="button" style="margin: 10px;">Home</a>
+    <div class="container">
+    
+        <div class="page-header">
+            <h1>Imagens Responsivas <small>BootStrap</small></h1>
+        </div>
+
+        <div class="row">
+            <!-- Row é importante, pois com ela você consegue definir o tamanho do grid-->
+            <div class="col-sm-6">
+                <h3>Imagem responsiva</h3>
+                <img src="img/uvas.png" class="img-responsive">
+            </div>
+
+            <div class="col-sm-6">
+                <h3>Imagem não responsiva</h3>
+                <img src="img/uvas.png" >
+            </div>
+
+        </div>  <!-- Row -->
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Formas em Imagens</h3>
+                <img src="img/uvas200.png" class="img-circle">
+                <img src="img/uvas200.png" class="img-rounded">
+                <img src="img/uvas200.png" class="img-thumbnail">
+            </div>
+        </div>
+
+        <br><br><br><br>
+        <div>
+            <h4>Para saber mais acesse <a href="https://getbootstrap.com/docs/3.3/css/#images">aqui</a>.</h4>
+        </div>  
+        
+    </div>  <!-- Container-->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

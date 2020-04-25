@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tabelas BootStrap</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="estilo.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <a class="btn btn-primary" href="home.html" role="button" style="margin: 10px;">Home</a>
+        <div class="container">
+            <div class="page-header">
+                <h1>Tabela BootStrap</h1>
+            </div>
+
+            <table class="table table-striped table-bordered table-hover table-condensed"> <!--Todas as classes acima, são do bootstrap-->
+                <thead> <!--Cabeçalho-->
+                    <tr> <!--Criado uma linha-->
+                        <!--Itens da linha-->
+                        <th>Produto</th> <!-- th = Formatação de cabelçalho-->
+                        <th>Fabricante</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody> <!--Formatação do corpo da tabela-->
+                    <tr class="success"> <!--Algumas classe de cores-->
+                        <td>Notebook 980</td>
+                        <td>HP</td>
+                        <td>R$ 1.800,00</td>
+                    </tr>
+                    <tr class="danger">
+                        <td>MacBook Air</td>
+                        <td>Apple</td>
+                        <td>R$ 4.800,00</td>
+                    </tr>
+                    <tr>
+                        <td class="warning">HP Pavillion</td>
+                        <td>HP</td>
+                        <td class="info">R$ 2.500,00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br><br><br><br>
+            <div>
+                <h4>Para saber mais acesse <a href="https://getbootstrap.com/docs/3.3/css/#tables">aqui</a>.</h4>
+            </div>  
+
+        </div> <!-- container -->
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

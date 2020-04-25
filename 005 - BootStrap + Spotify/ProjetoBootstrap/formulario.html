@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulários</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <a class="btn btn-primary" href="home.html" role="button" style="margin: 10px;">Home</a>
+    <div class="container">
+
+        <div class="page-header">
+            <!--Page header é do bootstrap, ele é um cabeçalho para a página com uma linha clara embaixo do texto-->
+            <h1>Formulários
+                <small> bootstrap</small>
+            </h1>
+
+            <div class="row">
+                <!--Criamos uma linha para poder criar as duas colunas-->
+
+                <div class="col-sm-8">
+                    <h3>Cadastre-se</h3>
+                    <form>
+                        <div class="form-group">
+                            <!--Para cada item do formulário, iremos criar uma div com a class form-group-->
+                            <label for="name">Nome</label>
+                            <input type="text" name="cadastro-name" id="name" class="form-control">
+                            <!--A classe form-control é do bootstrap e automáticamente ele coloca uma formatação no seu input, pode testar sem ela e verá a diferença -->
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="cadastro-email" id="email" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">Password</label>
+                            <input type="password" name="cadastro-password" id="senha" class="form-control">
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Aceito os termos do serviço
+                            </label>
+                        </div>
+
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="tp-curso">
+                                <!--Precisamos colocar o mesmo "name" no radio-box para conseguir selecionar apenas 1-->
+                                PHP
+                            </label>
+                            <label>
+                                <input type="radio" name="tp-curso">
+                                <!--Precisamos colocar o mesmo "name" no radio-box para conseguir selecionar apenas 1-->
+                                Java
+                            </label>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-default">Salvar</button>
+
+                    </form>
+                </div>
+
+                <div class="col-sm-4">
+                    <!--Não poderia ser mais que 4 nessa row, pois já tem 8 para o cadastre-se e o total é 12 colunas-->
+                    <h3>Logar</h3>
+
+                    <div class="form-group">
+                        <!--Deixamos sem o label e colocamos apenas -->
+                        <input type="email" class="form-control" id="login-email" placeholder="Digite seu e-mail">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="login-senha" placeholder="Digite sua senha">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Logar</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <br><br><br><br>
+        <div>
+            <h4>Para saber mais acesse <a href="https://getbootstrap.com/docs/3.3/css/#forms">aqui</a>.</h4>
+        </div> 
+
+    </div> <!-- container -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

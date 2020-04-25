@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cálculos</title>
+
+        
+        <script>
+            var num1 = prompt('Digite o valor de A: ');
+            var num2 = prompt('Digite o valor de B: ');
+
+            //recuperamos o valor de  num1 e num2 e transformamos em número.
+            //Um em numero inteiro(parseInt) e outro em número decimal (parseFloat)
+            num1 = parseInt(num1);
+            num2 = parseFloat(num2);
+
+
+            //operador % (módulo), retorna o número do resto da divisao
+
+            document.write('A soma entre ' + num1 + ' e ' + num2 + ' é igual a: ' + (num1 + num2) + '<br>');
+            document.write('A subtração entre ' + num1 + ' e ' + num2 + ' é igual a: ' + (num1 - num2) + '<br>');
+            document.write('A multiplicação entre ' + num1 + ' e ' + num2 + ' é igual a: ' + (num1 * num2) + '<br>');
+            document.write('A divisão entre ' + num1 + ' e ' + num2 + ' é igual a: ' + (num1 / num2) + '<br>');
+            document.write('O módulo entre ' + num1 + ' e ' + num2 + ' é igual a: ' + (num1 % num2) + 'retorna o número do resto da divisao' + '<br>');
+
+            //com incremento pré (faz ja no momento em que mostra na tela)
+            document.write('O incremeto pré de ' + num1 + ' é: ' + (++num1) + '<br>');
+            
+            //com incremento pós (irá fazer somente depois que mostrado na tela)
+            document.write('O incremeto pós de ' + num2 + ' é: ' + (num2++) + ' - esse não sofre alteração, só depois que acabar essa linha de código' + '<br>');
+
+
+            //com decremento pré (faz ja no momento em que mostra na tela)
+            document.write('O incremeto pré de ' + num1 + ' é: ' + (--num1) + '<br>');
+
+            //com deremento pós (irá fazer somente depois que mostrado na tela)
+            document.write('O incremeto pós de ' + num2 + ' é: ' + (num2--) + ' - esse não sofre alteração, só depois que acabar essa linha de código' + '<br>');
+            
+        </script>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1 class="text-center">Hello World</h1>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

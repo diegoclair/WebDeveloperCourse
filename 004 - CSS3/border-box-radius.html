@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+
+		<!-- Normalize CSS -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!--Sem esse normalize você pode abrir no Internet Explorer e no google chrome e perceberá que existem algumas diferenças que com esse normalize, ele acerta, além dele corrigir diversos bugs-->
+
+		<!-- Estilo customizado -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<!--  ** Abaixo é um comentário condicional, para que o html5 seja compatível com navegadores antigos ** -->
+		<!-- Ele só vai executar o código abaixo se for o navegador for menor que o IE9-->
+		<!-- Tutorial e onde pegar o arquivo para a condição abaixo: https://github.com/aFarkas/html5shiv -->
+		<!-- Para usar a condição abaixo, é necessário baixar o Html5shivjs.js que fica no link acima dentro da pasta dist-->
+
+		<!-- [if IE]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+	</head>
+
+	<body>
+
+		<div id="box">
+			<h2>Título 1</h2>
+			<span>Mesmo padding nas duas caixas</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis massa sit amet nisl iaculis, non faucibus mauris consectetur. Sed consequat, ante ac vulputate egestas, purus elit rutrum ipsum, at dignissim sem ante vitae erat.</p>
+		</div>
+
+		<div id="box2">
+			<h2>Título 2</h2>
+			<span>Mesmo padding nas duas caixas</span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis massa sit amet nisl iaculis, non faucibus mauris consectetur. Sed consequat, ante ac vulputate egestas, purus elit rutrum ipsum, at dignissim sem ante vitae erat.</p>
+		</div>
+	
+	</body>
+</html>

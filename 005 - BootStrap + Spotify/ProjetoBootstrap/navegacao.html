@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navegação BootStrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <!-- **************   Barra de navegação *****************-->
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <!--Botao para o menu nave bar quando a tela for pequena-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#barra-navegacao">
+                    <!-- Colocamos o data-target, para o botao saber pelo id o que ele precisa trazer -->
+                    <span class="sr-only">Alternar Menu</span>
+                    <!-- A classe de "sr-only" acima não aparece, mas é preciso colocar para as 3 barras do menu (abaixo) não fique sem sentido para o navegador -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">LOGO</a>
+            </div>
+
+            <!-- criado id para  botao abrir certo -->
+            <div class="collapse navbar-collapse" id="barra-navegacao">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home    </a></li>
+                    <li><a href="#">Empresa </a></li>
+                    <li><a href="#">Cliente </a></li>
+                    <li><a href="#">Produtos</a></li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Posso colocar imagem <img src="img/uvas200.png" class="img-circle img-perfil">
+                            <b class="caret"></b>
+                            <!-- O caret é a setinha que fica apontada pra baixo no dropdown -->
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Editar perfil   </a>
+                            <li><a href="#">Meus dados      </a></li>
+                            <li><a href="#">Sair            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>  <!-- /.navbar-collapse -->
+    </nav>
+    <!-- **************   Barra de navegação *****************-->
+    <a class="btn btn-primary" href="home.html" role="button" style="margin: 10px;">Home</a> 
+    <div class="container">
+        <div class="page-header">
+                
+            <h1>Navegação BootStrap</h1>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <br><br><br><br><br><br>
+        <div>
+            <h4>Para saber mais acesse <a href="https://getbootstrap.com/docs/3.3/javascript/#buttons">aqui</a>.</h4>
+        </div> 
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

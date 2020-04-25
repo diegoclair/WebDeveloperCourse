@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Links Format</title>
+		<meta charset="utf-8">
+
+		<style type="text/css">
+			/*Existem quatro estados dos links
+			1 - Links não visitados (ficam na cor azul)
+			2 - Links visitados (ficam roxos)
+			3 - Efeito hover (quando você passa o cursor sobre o link)
+			4 - Links ativos, quando você clica no link (e segura por exemplo)
+
+			Se você colocar apenas o a como classe, ele formata automáticamente todos os estados*/
+
+			a{
+				text-decoration: none; /*Retira o underline e neste caso, de todos os hiperlinks*/
+				padding: 4px;
+			}
+
+			/*PARA FORMATAR OS ESTADOS TEM QUE MANTER A ORDEM ABAIXO
+			e caso você não queira algum, basta não criar*/
+
+			a:link{ /*Formata o link não visitado*/
+				color: #b9c941;
+			}
+
+			a:visited{ /*Formata o link visitado*/
+				color: #c0c0c0;
+			}
+
+			a:hover{ /*Formata quando você passa o cursor sobre o link*/
+				color: #FFF;
+				background-color: #6d790f;
+			}
+
+			a:active{ /*Link ativos (quando clicado)*/
+				color: #e4f371;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<a href="https://www.google.com.br">Google</a> |
+		<a href="https://www.techmundo.com.br">Tech Mundo</a> |
+		<a href="https://www.megacurioso.com.br">Mega Curioso</a>
+	
+	</body>
+</html>
